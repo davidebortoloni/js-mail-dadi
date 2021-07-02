@@ -1,0 +1,29 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.row {
+    display: flex;
+    height: 100vh; 
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.align-items-center {
+    align-items: center;
+}
+.col {
+    width: 45%;
+}
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.btn {
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: salmon;
+}
