@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,10 +25,33 @@ a {
     color: white;
     text-decoration: none;
 }
+a:hover {
+    color: black;
+}
+#logo {
+    display: inline-block;
+}
 .btn {
     height: 200px;
     line-height: 200px;
     border-radius: 50px;
     text-align: center;
     background-color: salmon;
+}
+.btn:hover {
+    background-color: pink;
+}
+header {
+    height: 90px;
+    background-color: salmon;
+    line-height: 90px;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+h2 {
+    margin: 40px 0;
+}
+h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
