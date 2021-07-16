@@ -9,7 +9,11 @@ var endMessage;
 var gameAreaId = document.getElementById("game-area");
 var endGameId = document.getElementById("end-game");
 
-for (var i = 0; i < 5; i++) {
+var i = 0;
+var fun = setInterval(function () {
+    if (i == 5) {
+        clearInterval(fun);
+    }
     userResult = Math.floor(Math.random() * 6) + 1;
     pcResult = Math.floor(Math.random() * 6) + 1;
     gameMessage += "<h3>" + (i + 1) + "° round</h3>";
@@ -27,16 +31,17 @@ for (var i = 0; i < 5; i++) {
         gameMessage += "<div>Nulla di fatto! Il " + (i + 1) + "° round è un pareggio</div>";
     }
     gameAreaId.innerHTML = gameMessage;
-}
-
-if (userVictories > pcVictories) {
-    endMessage = "Complimenti, hai battuto il computer!";
-}
-else if (userVictories < pcVictories) {
-    endMessage = "Che sfortuna, il computer ti ha sconfitto!";
-}
-else {
-    endMessage = "Un pareggio, meglio che aver perso, dai. Fai un altro tentativo.";
-}
-
-endGameId.innerHTML = endMessage;
+    i++;
+}, 1000);
+setTimeout(function () {
+    if (userVictories > pcVictories) {
+        endMessage = "Complimenti, hai battuto il computer!";
+    }
+    else if (userVictories < pcVictories) {
+        endMessage = "Che sfortuna, il computer ti ha sconfitto!";
+    }
+    else {
+        endMessage = "Un pareggio, meglio che aver perso, dai. Fai un altro tentativo.";
+    }
+    endGameId.innerHTML = endMessage;
+}, 7000);
